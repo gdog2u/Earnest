@@ -1,4 +1,8 @@
-package game;
+package game.Frames;
+
+import game.Container;
+import game.Player;
+import game.Items.Item;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -13,6 +17,11 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
+/**
+ * The main frame for the game.
+ * @author Geoffrey
+ *
+ */
 public class FrameMainGame{
 
 	private static Player hero = new Player();
@@ -43,7 +52,7 @@ public class FrameMainGame{
 	private JButton equipmBtn = new JButton("Equipment");
 	
 	
-	FrameMainGame (){
+	public FrameMainGame (){
 
 //		hero.testInventory();
 		

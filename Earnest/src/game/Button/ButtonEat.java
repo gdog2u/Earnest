@@ -1,4 +1,8 @@
-package game;
+package game.Button;
+
+import game.Frames.FrameInventory;
+import game.Items.Item;
+import game.Items.ItemFood;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,6 +10,11 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 
+/**
+ * Custom button for the {@link FrameInventory} gui for {@link ItemFood} items.
+ * @author Geoffrey
+ *
+ */
 public class ButtonEat extends JButton {
 
 	/**

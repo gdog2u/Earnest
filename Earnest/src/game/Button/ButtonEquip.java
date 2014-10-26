@@ -1,4 +1,8 @@
-package game;
+package game.Button;
+
+import game.Frames.FrameMainGame;
+import game.Items.Item;
+import game.Items.ItemSword;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,7 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
- * A custom JButton for use in moving items from the player's inventory into their equipment
+ * A custom JButton for use in moving items from the player's inventory into their equipment.
  * @author Geoffrey
  */
 public class ButtonEquip extends JButton {

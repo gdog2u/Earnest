@@ -1,4 +1,6 @@
-package game;
+package game.Button;
+
+import game.Items.Item;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

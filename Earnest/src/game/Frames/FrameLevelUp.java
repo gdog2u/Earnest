@@ -1,4 +1,7 @@
-package game;
+package game.Frames;
+
+import game.WrappingLabel;
+import game.Button.ButtonLevel;
 
 import java.awt.BorderLayout;
 import java.awt.Component;

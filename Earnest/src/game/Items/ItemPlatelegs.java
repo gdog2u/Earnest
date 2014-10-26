@@ -1,11 +1,11 @@
-package game;
+package game.Items;
 
-public class ItemCuirass extends ItemArmor {
-	
+public class ItemPlatelegs extends ItemArmor {
+
 	private String name;
 	private String desc;
 	private int cost;
-	private int dfn;
+	private int dfn; 
 	
 	@Override
 	public String getName() {
@@ -26,9 +26,9 @@ public class ItemCuirass extends ItemArmor {
 	public void setCost(int set) {
 		cost = set;
 	}
-	
+
 	@Override
-	public int getDfn(){
+	public int getDfn() {
 		return dfn;
 	}
 

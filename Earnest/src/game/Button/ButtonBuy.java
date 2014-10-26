@@ -1,4 +1,8 @@
-package game;
+package game.Button;
+
+import game.Frames.FrameMainGame;
+import game.Frames.FrameShop;
+import game.Items.Item;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +11,11 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
+/**
+ * Custom button for use in {@link FrameShop} gui for buying.
+ * @author Geoffrey
+ *
+ */
 public class ButtonBuy extends JButton {
 
 	/**

@@ -1,4 +1,8 @@
-package game;
+package game.Button;
+
+import game.Frames.FrameEquipment;
+import game.Frames.FrameMainGame;
+import game.Items.Item;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -6,6 +10,11 @@ import java.util.ArrayList;
 
 import javax.swing.JButton;
 
+/**
+ * Custom button for {@link FrameEquipment}
+ * @author Geoffrey
+ *
+ */
 public class ButtonUnequip extends JButton {
 
 	/**

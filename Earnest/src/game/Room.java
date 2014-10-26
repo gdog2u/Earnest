@@ -1,8 +1,18 @@
 package game;
 
-import game.Item.*;
+import game.Items.Item;
+import game.Items.ItemFood;
+import game.Items.ItemKey;
+import game.Items.ItemSword;
+import game.Items.Item.*;
+
 import java.util.ArrayList;
 
+/**
+ * Object for rooms for the dungeon.
+ * @author Geoffrey
+ *
+ */
 public class Room {
 	public Room(){
 		

@@ -1,4 +1,10 @@
-package game;
+package game.Frames;
+
+import game.Container;
+import game.WrappingLabel;
+import game.Button.ButtonBuy;
+import game.Button.ButtonSell;
+import game.Items.Item;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;

@@ -1,4 +1,6 @@
-package game;
+package game.Items;
+
+import game.Frames.FrameMainGame;
 
 import java.util.Random;
 

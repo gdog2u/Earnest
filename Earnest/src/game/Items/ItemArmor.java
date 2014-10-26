@@ -1,5 +1,10 @@
-package game;
+package game.Items;
 
+/**
+ * Abstract class that assigns armor type items necessary getters and setters.
+ * @author Geoffrey
+ *
+ */
 public abstract class ItemArmor extends Item {
 
 	@Override

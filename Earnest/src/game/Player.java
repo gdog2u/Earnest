@@ -1,7 +1,22 @@
 package game;
 
+import game.Frames.FrameEquipment;
+import game.Frames.FrameInventory;
+import game.Frames.FrameLevelUp;
+import game.Frames.FrameMainGame;
+import game.Items.Item;
+import game.Items.ItemFood;
+import game.Items.ItemHelmet;
+import game.Items.ItemKey;
+import game.Items.ItemSword;
+
 import java.util.*;
 
+/**
+ * Object for the player
+ * @author Geoffrey
+ *
+ */
 public class Player {
 	private String name;
 	private int level = 1;

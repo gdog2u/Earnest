@@ -1,4 +1,8 @@
-package game;
+package game.Frames;
+
+import game.WrappingLabel;
+import game.Button.ButtonTake;
+import game.Items.Item;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -41,7 +45,7 @@ public class FrameContainer extends JFrame {
 			for(int i = 0;i < contents.size();i++){
 				items.add(new WrappingLabel(contents.get(i).getName()));
 				items.add(new WrappingLabel(contents.get(i).getDesc()));
-				items.add(new ButtonTake(contents, i));
+				items.add(new ButtonTake(contents, i, this));
 			}
 			for(Component c : items){
 				contentGrid.add(c);
@@ -51,13 +55,6 @@ public class FrameContainer extends JFrame {
 		
 	}
 	
-	/**
-	 * Attempts to update the list of item shown in the frame
-	 * @param contents
-	 */
-	public static void update(ArrayList<Item> contents){
-		
-	}
 	
 /*	public void update(){
 		this.update(null);

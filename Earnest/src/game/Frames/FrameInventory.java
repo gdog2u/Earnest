@@ -1,4 +1,6 @@
-package game;
+package game.Frames;
+
+import game.Items.Item;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;

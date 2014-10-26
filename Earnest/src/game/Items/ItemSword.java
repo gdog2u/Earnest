@@ -1,4 +1,6 @@
-package game;
+package game.Items;
+
+import game.Frames.FrameMainGame;
 
 public class ItemSword extends Item{
 

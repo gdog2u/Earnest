@@ -1,8 +1,16 @@
 package game;
 
+import game.Frames.FrameContainer;
+import game.Items.Item;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * Object for loot chests found throughout the dungeon.
+ * @author Geoffrey
+ *
+ */
 public class Container {
 
 	private ArrayList<Item> inventory = new ArrayList<Item>();

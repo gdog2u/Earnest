@@ -1,4 +1,10 @@
-package game;
+package game.Frames;
+
+import game.WrappingLabel;
+import game.Button.ButtonDrop;
+import game.Button.ButtonUnequip;
+import game.Items.Item;
+import game.Items.ItemSword;
 
 import java.awt.BorderLayout;
 import java.awt.Component;

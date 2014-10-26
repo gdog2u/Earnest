@@ -1,8 +1,9 @@
-package game;
+package game.Items;
 
 import java.util.Random;
 
 /**
+ * Abstract class for assigning necessary methods for items, and returning items for chests.
  * @author Geoffrey
  */
 
