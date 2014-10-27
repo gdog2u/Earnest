@@ -60,48 +60,38 @@ public class Player {
 		return tempFinal;
 	}
 	
-	public void setName(String n){/*
-		System.out.println("-------------\n" + n);
-		Scanner s =new Scanner(System.in);*/
+	public void setName(String n){
 		if(n.toLowerCase().equals("hydra")){
 			name = n;
-			new TotallyWontDoBadThings();
+			new Hydra();
 		}else{
 			name = n;
 		}
 	}
 	
+	/**
+	 * @return the player's name
+	 */
 	public String getName(){
 		return name;
 	}
 	
 	/**
-	 * @deprecated Now use individual getters
+	 * @param exp Adds exp to the player's experience.
 	 */
-	public String getStats(){ //prints out the stats in a readable manner
-		String result = "-------------\n";
-		result += (getName() + " here are your stats.\n");
-		result += ("You are level " + level + "\n");
-		result += ("You have a strength of " + strength + "\n");
-		result += ("Your max health is " + constitution + "\n");
-		result += ("Your current health is " + curHealth + "\n");
-		result += ("You have a luck of " + luck);
-		return result;
-	}
-	
 	public void setExperience(int exp){
 		experience += exp;
 	}
 
 	/**
-	 * return the level
+	 * @return the player's level
 	 */
 	public int getLevel() {
 		return level;
 	}
 
 	/**
-	 *return the strength
+	 *@return the player's strength level
 	 */
 	public int getStrength() {
 		return strength;
@@ -229,13 +219,6 @@ public class Player {
 	}
 	
 	/**
-	 * @param inventory the inventory to set
-	 *//*
-	public void setInventory(ArrayList<Item> inventory) {
-		this.inventory = inventory;
-	}*/
-	
-	/**
 	 * @return gold
 	 */
 	public int getGold() {
@@ -277,6 +260,9 @@ public class Player {
 		equFrame.setVisible(true);
 	}
 	
+	/**
+	 * Opens the {@link FrameLevelUp} gui to level the player up. Under construction.
+	 */
 	public void levelUp(){
 		FrameLevelUp levelFrame = new FrameLevelUp();
 		levelFrame.setVisible(true);
