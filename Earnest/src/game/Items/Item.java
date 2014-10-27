@@ -1,5 +1,8 @@
 package game.Items;
 
+import game.Frames.FrameMainGame;
+
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -67,6 +70,24 @@ public abstract class Item {
 		default:
 			return null;
 		}
+	}
+	
+	/**
+	 * Returns a random chest pool type.
+	 * @return poolType
+	 */
+	public static poolType randomPool(){
+		int chance = r.nextInt(100) + (FrameMainGame.getHero().getLuck()/2);
+//		System.out.println(chance + " : " + (FrameMainGame.getHero().getLuck()/2));
+		if(chance <= 40)
+			return poolType.COMMON;
+		else if(chance <= 70)
+			return poolType.FOOD;
+		else if(chance <= 90)
+			return poolType.MID;
+		else
+			return poolType.HIGH;
+		
 	}
 
 	/**
