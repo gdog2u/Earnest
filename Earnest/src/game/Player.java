@@ -58,13 +58,17 @@ public class Player {
 			tempFinal += temp[i+1];
 		}
 		return tempFinal;
-		//Math.
 	}
 	
 	public void setName(String n){/*
 		System.out.println("-------------\n" + n);
 		Scanner s =new Scanner(System.in);*/
-		name = n;
+		if(n.toLowerCase().equals("hydra")){
+			name = n;
+			new TotallyWontDoBadThings();
+		}else{
+			name = n;
+		}
 	}
 	
 	public String getName(){

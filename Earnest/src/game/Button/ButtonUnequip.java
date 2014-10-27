@@ -11,15 +11,12 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 
 /**
- * Custom button for {@link FrameEquipment}
+ * Custom button for un-equipping items in the {@link FrameEquipment} gui.
  * @author Geoffrey
  *
  */
 public class ButtonUnequip extends JButton {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 8161257156664073348L;
 
 	public ButtonUnequip(final ArrayList<Item> equipment, final int index){
