@@ -61,7 +61,6 @@ public class Container {
 	}
 
 	/**
-	 * 
 	 * @return the contents of the container.
 	 */
 	public ArrayList<Item> getContents() {
