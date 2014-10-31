@@ -63,7 +63,7 @@ public class Player {
 	public void setName(String n){
 		if(n.toLowerCase().equals("hydra")){
 			name = n;
-			new Hydra();
+//			new Hydra(); Really Geof Really Add this to the repo or just kill the file This breaks the compile >:(
 		}else{
 			name = n;
 		}

@@ -12,13 +12,13 @@ archivesBaseName = 'Earnest'
 version = '0.1'
 sourceCompatibility = 1.7
 
-task sourceJar(type: jar) {
+task sourceJar(type: Jar) {
    from sourceSets.main.allSource
    classifier = "sources"
 }
 
 artifacts {
-   archive jar
-   archive spourceJar
+   archives jar
+   archives sourceJar
 }
 
