@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+
+repositories { 
+    mavenCentral()
+}
+
+group = 'game' //This is your packageing you chould change it to something like online alias.game.earnest (ie. gdog2u.game.earnest)
+archivesBaseName = 'Earnest'
+version = '0.1'
+sourceCompatibility = 1.7
+
+task sourceJar(type: jar) {
+   from sourceSets.main.allSource
+   classifier = "sources"
+}
+
+artifacts {
+   archive jar
+   archive spourceJar
+}
+
