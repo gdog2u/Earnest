@@ -1,11 +1,13 @@
 package game.Items;
 
+import game.Interfaces.Equipable;
+
 /**
  * Abstract class that assigns armor type items necessary getters and setters.
  * @author Geoffrey
  *
  */
-public abstract class ItemArmor extends Item {
+public abstract class ItemArmor extends Item implements Equipable{
 
 	@Override
 	public abstract String getName();

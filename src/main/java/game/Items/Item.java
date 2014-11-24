@@ -1,8 +1,8 @@
 package game.Items;
 
 import game.Frames.FrameMainGame;
+import game.Interfaces.Equipable;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -10,7 +10,7 @@ import java.util.Random;
  * @author Geoffrey
  */
 
-public abstract class Item {
+public abstract class Item{
 
 	
 	static Random r = new Random();

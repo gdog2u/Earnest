@@ -1,8 +1,9 @@
 package game.Items;
 
 import game.Frames.FrameMainGame;
+import game.Interfaces.Equipable;
 
-public class ItemSword extends Item{
+public class ItemSword extends Item implements Equipable{
 
 	private double dmg;
 	private String name;
