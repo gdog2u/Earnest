@@ -15,12 +15,11 @@ import java.util.*;
 /**
  * Object for the player
  * @author Geoffrey
- *
  */
 public class Player {
 	private String name;
 	private int level = 1;
-	private int strength = 0;
+	private int strength;
 	private int constitution;
 	private int dexterity;
 	private int curHealth;
