@@ -13,13 +13,13 @@ import javax.swing.JPanel;
 /**
  * A frame used to show the player's inventory
  * @author Geoffrey
- *
  */
 public class FrameInventory extends JFrame{
 
 	private static final long serialVersionUID = -8249200798924730479L;
 
 	public FrameInventory(ArrayList<Item> inventory) {
+		
 		this.setTitle("Inventory");
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setSize(400, inventory.size()*100);
@@ -39,6 +39,7 @@ public class FrameInventory extends JFrame{
 			add(FrameUpdater.inventoryUpdate(inventory), BorderLayout.SOUTH);
 		}
 		add(goldGrid, BorderLayout.NORTH);
+		
 	}
 	
 	/*public static void frameUpdate(JPanel invPanel){
