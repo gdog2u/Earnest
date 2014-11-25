@@ -15,6 +15,7 @@ public class Room {
 	Random r = new Random();
 	
 	ArrayList<Container> containersList = new ArrayList<>();
+	ArrayList<Enemy> enemyList = new ArrayList<>();
 	
 	public Room(){
 		genChests();
@@ -23,10 +24,18 @@ public class Room {
 	public void genChests(){
 		for(int i = 0; i < 3; i++){
 			int chance = r.nextInt(25);
-			if(chance <= FrameMainGame.getHero().getLuck()){
+			if(chance >= FrameMainGame.getHero().getLuck()+9){
 				containersList.add(new Container());
 			}
 		}
+	}
+	
+	public boolean hasEnemies(){
+		return !enemyList.isEmpty();
+	}
+	
+	public boolean hasChest(){
+		return !containersList.isEmpty();
 	}
 	
 }
