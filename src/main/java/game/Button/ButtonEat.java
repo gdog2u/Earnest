@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  * Custom button for the {@link FrameInventory} gui for {@link ItemFood} items.
@@ -28,9 +29,12 @@ public class ButtonEat extends JButton {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
-				((ItemFood) inv.get(index)).eat();
-				inv.remove(index);
+				if(inv.get(index) == null){
+					JOptionPane.showMessageDialog(null, "This item is no longer in your inventory.\nPlease reopen to update.");
+				}else{
+					((ItemFood) inv.get(index)).eat();
+					inv.set(index, null);
+				}
 				
 			}
 		});

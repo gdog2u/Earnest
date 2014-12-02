@@ -23,16 +23,18 @@ public class ButtonBuy extends JButton {
 	 */
 	private static final long serialVersionUID = 5046454595411429L;
 
-	public ButtonBuy(final ArrayList<Item> contents, final int i) {
+	public ButtonBuy(final ArrayList<Item> contents, final int index) {
 		setText("Buy");
 		addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				if(FrameMainGame.getHero().getGold() >= contents.get(i).getCost()){
-					FrameMainGame.getHero().setGold(-contents.get(i).getCost());
-					FrameMainGame.getHero().getInventory().add(contents.get(i));
-					contents.remove(i);
+				if(contents.get(index) == null){
+					JOptionPane.showMessageDialog(null, "This item is no longer here.\nPlease reopen to update.");
+				}else if(FrameMainGame.getHero().getGold() >= contents.get(index).getCost()){
+					FrameMainGame.getHero().setGold(-contents.get(index).getCost());
+					FrameMainGame.getHero().getInventory().add(contents.get(index));
+					contents.set(index, null);
 				}else{
 					JOptionPane.showMessageDialog(null, "You do not have enough money for that!");
 				}

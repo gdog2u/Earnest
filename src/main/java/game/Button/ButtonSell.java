@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  * Custom button for selling items in the {@link FrameShop} gui.
@@ -28,9 +29,13 @@ public class ButtonSell extends JButton {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				
-				FrameMainGame.getHero().setGold(contents.get(index).getCost());
-				contents.remove(index);
+				if(contents.get(index) == null){
+					JOptionPane.showMessageDialog(null, "This item is no longer in your inventory.\nPlease reopen to update.");
+				}
+				else{
+					FrameMainGame.getHero().setGold(contents.get(index).getCost());
+					contents.set(index, null);
+				}
 				
 			}
 		});

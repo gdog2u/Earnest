@@ -28,18 +28,20 @@ public class ButtonEquip extends JButton {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if(FrameMainGame.getHero().getEquipment().isEmpty() == false){
+				if(inv.get(index) == null){
+					JOptionPane.showMessageDialog(null, "This item is no longer in your inventory.\nPlease reopen to update.");
+				}else if(FrameMainGame.getHero().getEquipment().isEmpty() == false){
 					for (Item i : FrameMainGame.getHero().getEquipment()) {
 						if(i instanceof ItemSword){
 							JOptionPane.showMessageDialog(null, "You already have a sword equipped.");
 						}else{
 							FrameMainGame.getHero().getEquipment().add(inv.get(index));
-							inv.remove(index);
+							inv.set(index, null);
 						}
 					}
 				}else{
 					FrameMainGame.getHero().getEquipment().add(inv.get(index));
-					inv.remove(index);
+					inv.set(index, null);
 				}
 				
 			}

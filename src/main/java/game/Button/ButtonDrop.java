@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  * A custom JButton for use in removing items from the player's inventory
@@ -22,8 +23,11 @@ public class ButtonDrop extends JButton {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
-				al.remove(index);
+				if(al.get(index) == null){
+					JOptionPane.showMessageDialog(null, "This item is no longer in your inventory.\nPlease reopen to update.");
+				}else{
+					al.set(index, null);
+				}
 				
 			}
 			
