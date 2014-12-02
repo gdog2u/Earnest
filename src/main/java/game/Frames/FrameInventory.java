@@ -20,10 +20,13 @@ public class FrameInventory extends JFrame{
 
 	public FrameInventory(ArrayList<Item> inventory) {
 		
+		inventory = FrameUpdater.removeNulls(inventory);
+		
 		this.setTitle("Inventory");
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setSize(400, inventory.size()*100);
 		this.setLocationRelativeTo(null);
+		
 		JPanel goldGrid = new JPanel(new GridLayout(1,4));
 		
 		JLabel goldLbl = new JLabel("Gold: ");
@@ -36,7 +39,7 @@ public class FrameInventory extends JFrame{
 			this.setSize(200, 100);
 			add(new JLabel("No items."), BorderLayout.CENTER);
 		}else{
-			add(FrameUpdater.inventoryUpdate(inventory), BorderLayout.SOUTH);
+			add(FrameUpdater.inventoryUpdate(inventory), BorderLayout.CENTER);
 		}
 		add(goldGrid, BorderLayout.NORTH);
 		
