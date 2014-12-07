@@ -22,6 +22,8 @@ public class FrameContainer extends JFrame {
 	
 	public FrameContainer(String title, ArrayList<Item> contents){
 		
+		contents = FrameUpdater.removeNulls(contents);
+		
 		setTitle(title);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setSize(300, contents.size()*100);
@@ -38,9 +40,5 @@ public class FrameContainer extends JFrame {
 		
 	}
 	
-	
-/*	public void update(){
-		this.update(null);
-	}*/
 }
 
