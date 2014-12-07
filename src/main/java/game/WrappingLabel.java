@@ -36,6 +36,10 @@ public class WrappingLabel extends JLabel {
 		colors.put("red", "#FF0000");
 		colors.put("blue", "#0000FF");
 		colors.put("green", "#00FF00");
+		colors.put("purple", "#990099");
+		colors.put("orange", "#FF9900");
+		colors.put("yellow", "#FFFF00");
+		colors.put("pink", "#FF6699");
 		
 	}
 
