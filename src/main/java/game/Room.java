@@ -16,6 +16,7 @@ public class Room {
 	
 	ArrayList<Container> containersList = new ArrayList<>();
 	ArrayList<Enemy> enemyList = new ArrayList<>();
+	boolean isShop = false;
 	
 	public Room(){
 		genChests();
@@ -38,4 +39,7 @@ public class Room {
 		return !containersList.isEmpty();
 	}
 	
+	public boolean isShop(){
+		return isShop;
+	}
 }
