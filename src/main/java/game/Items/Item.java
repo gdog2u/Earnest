@@ -13,7 +13,7 @@ import java.util.Random;
 public abstract class Item{
 
 	
-	static Random r = new Random();
+	private static Random r = new Random();
 	
 	public enum armorType{
 		LEATHER,CHAIN,IRON,STEEL;
@@ -90,6 +90,13 @@ public abstract class Item{
 		
 	}
 
+	/**
+	 * To be overridden by the child classes.
+	 * used to change the name of items for special cases.
+	 * @param name
+	 */
+	public abstract void setName(String name);
+	
 	/**
 	 *To be overridden by the child classes.
 	 *Returns the name of the item.

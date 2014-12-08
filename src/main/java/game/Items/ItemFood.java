@@ -66,6 +66,11 @@ public class ItemFood extends Item{
 	}
 	
 	@Override
+	public void setName(String name){
+		this.name = getAdjective() + name;
+	}
+	
+	@Override
 	public String getName(){
 		return name;
 	}

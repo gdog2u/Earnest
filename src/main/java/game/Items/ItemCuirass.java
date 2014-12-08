@@ -37,4 +37,9 @@ public class ItemCuirass extends ItemArmor {
 		dfn = set;
 	}
 
+	@Override
+	public void setName(String name) {
+		
+	}
+
 }

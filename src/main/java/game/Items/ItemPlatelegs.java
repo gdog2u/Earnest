@@ -37,4 +37,9 @@ public class ItemPlatelegs extends ItemArmor {
 		dfn = set;
 	}
 
+	@Override
+	public void setName(String name) {
+		this.name = name;
+	}
+
 }

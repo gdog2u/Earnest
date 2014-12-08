@@ -68,5 +68,10 @@ public class ItemSword extends Item implements Equipable{
 	public void setCost(int set) {
 		cost = set;
 	}
+
+	@Override
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 }

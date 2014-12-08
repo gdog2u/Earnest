@@ -12,6 +12,10 @@ public class ItemGold extends Item {
 		cost = getAmount();
 	}
 	
+	public ItemGold(int amount){
+		cost = amount;
+	}
+	
 	@Override
 	public String getName() {
 		return cost + " gold";
@@ -41,6 +45,14 @@ public class ItemGold extends Item {
 	@Override
 	public void setCost(int set) {
 		cost = set;
+	}
+	
+	/**
+	 *Unnecessary method. Only in place due to extending Item. 
+	 */
+	@Override
+	public void setName(String name){
+		
 	}
 
 }
