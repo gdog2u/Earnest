@@ -1,7 +1,6 @@
 package game.Items;
 
 import game.Frames.FrameMainGame;
-import game.Interfaces.Equipable;
 
 import java.util.Random;
 
@@ -22,10 +21,6 @@ public abstract class Item{
 		WOOD,STONE,IRON,STEEL;
 	}
 	
-	public enum foodType{
-		BREAD, STEW, PORIDGE, MEAT;
-	}
-	
 	public enum poolType{
 		COMMON, FOOD, MID, HIGH,
 		SHOP_LOW, SHOP_MID, SHOP_HIGH, 
@@ -42,7 +37,7 @@ public abstract class Item{
 		case COMMON: //pool type dungeon. low level items
 			chance = r.nextInt(100);
 			if(chance <= 30){
-				return new ItemFood(foodType.BREAD);
+				return new ItemFoodBread();
 			}else if(chance <= 45){
 				return new ItemSword(toolType.WOOD);
 			}else if(chance <= 60){
@@ -50,22 +45,22 @@ public abstract class Item{
 			}else if(chance <= 80){
 				return new ItemGold();
 			}else if(chance <= 95){
-				return new ItemFood(foodType.MEAT);
+				return new ItemFoodMeat();
 			}else{
-				return new ItemFood(foodType.STEW);
+				return new ItemFoodStew();
 			}
 		case SHOP_LOW: //pool type shop. Lesser goods.
 			chance = r.nextInt(100);
 			if(chance <= 5){
 				return new ItemSword(toolType.STEEL);
 			}else if(chance <= 30){
-				return new ItemFood(foodType.BREAD);
+				return new ItemFoodBread();
 			}else if(chance <= 60){
 				return new ItemSword(toolType.WOOD);
 			}else if(chance <= 80){
 				return new ItemSword(toolType.STONE);
 			}else{
-				return new ItemFood(foodType.PORIDGE);
+				return new ItemFoodFruit();
 			}
 		default:
 			return null;
